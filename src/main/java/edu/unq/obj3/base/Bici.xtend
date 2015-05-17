@@ -1,7 +1,7 @@
 package edu.unq.obj3.base
 
-import org.eclipse.xtend.lib.annotations.Data
 import java.util.List
+import org.eclipse.xtend.lib.annotations.Data
 
 import static extension edu.unq.obj3.base.ListExtensions.*
 
