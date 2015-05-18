@@ -1,4 +1,4 @@
-# Carga compartida entre vehículos
+# Carga compartida entre vehículos [![Build Status](https://travis-ci.org/uqbar-paco/obj3-xtend-multiple-dispatch.svg?branch=master)](https://travis-ci.org/uqbar-paco/obj3-xtend-multiple-dispatch)
 > Un ejemplo de multimethods en Xtend
 
 En este (in)útil programa, queremos calcular la carga que pueden llevar 2 vehículos en conjunto. 
