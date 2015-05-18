@@ -1,6 +1,8 @@
 # Carga compartida entre vehículos [![Build Status](https://travis-ci.org/uqbar-paco/obj3-xtend-multiple-dispatch.svg?branch=master)](https://travis-ci.org/uqbar-paco/obj3-xtend-multiple-dispatch)
 > Un ejemplo de multimethods en Xtend
 
+### Dominio
+
 En este (in)útil programa, queremos calcular la carga que pueden llevar 2 vehículos en conjunto. 
 
 Para esto, lo primero que necesitamos es la _carga neta_ de cada uno de ellos, que se calcula de la siguiente manera:
@@ -13,3 +15,13 @@ Una vez que tenemos eso, podemos calcular la carga compartida según las siguien
 - Un **Camion** con otro **Camion** suman sus cargas y las multiplican por la cantidad de acoplados que sea mayor (nosotros tampoco le vemos sentido a esto, pero el experto en logística nos dijo que ese era el cálculo).
 - Un **Auto** y otro **Auto** pueden llevar un pequeño acoplado entre los dos, por lo que su carga se incrementa en 150 kilos.
 - En cualquier otro caso, el cálculo es simplemente la suma entre las 2 cargas netas.
+
+### Soluciones propuestas
+
+Explotando al máximo las posibilidades de Xtend, proponemos 4 implementaciones diferentes:
+- [**type check**](https://github.com/uqbar-paco/obj3-xtend-multiple-dispatch/tree/master/src/main/java/edu/unq/obj3/typecheck), más conocido como `instanceof`
+- [**pattern matching**](https://github.com/uqbar-paco/obj3-xtend-multiple-dispatch/tree/master/src/main/java/edu/unq/obj3/patternmatching), implementado con el `switch` con vitaminas que trae Xtend
+- [**double dispatch**](https://github.com/uqbar-paco/obj3-xtend-multiple-dispatch/tree/master/src/main/java/edu/unq/obj3/doubledispatch), la opción más conservadora y OOP-purista-compliant
+- [**multimethods**](https://github.com/uqbar-paco/obj3-xtend-multiple-dispatch/tree/master/src/main/java/edu/unq/obj3/multimethods), o la evolución dinámica de la sobrecarga
+
+Dejamos al lector la tarea de analizar las ventajas y desventajas de cada una de estas opciones :smile:
