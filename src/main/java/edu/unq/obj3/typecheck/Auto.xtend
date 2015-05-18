@@ -7,7 +7,17 @@ class Auto implements Vehiculo {
 	int cargaInicial
 	boolean tieneGNC
 	
+	static int CARGA_ACOPLADO_COMPARTIDO = 150
+	
 	override cargaNeta() {
 		cargaInicial * if (tieneGNC) 3 else 1
+	}
+	
+	def cargaCompartidaCon(Vehiculo otro) {
+		if (otro instanceof Auto) {
+			this.cargaNeta + otro.cargaNeta + CARGA_ACOPLADO_COMPARTIDO
+		} else {
+			this.cargaNeta + otro.cargaNeta			
+		}
 	}
 }
