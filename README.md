@@ -19,9 +19,9 @@ Una vez que tenemos eso, podemos calcular la carga compartida según las siguien
 ### Soluciones propuestas
 
 Explotando al máximo las posibilidades de Xtend, proponemos 4 implementaciones diferentes:
+- [**double dispatch**](https://github.com/uqbar-paco/obj3-xtend-multiple-dispatch/tree/master/src/main/java/edu/unq/obj3/doubledispatch), la opción más conservadora y OOP-purista-compliant
 - [**type check**](https://github.com/uqbar-paco/obj3-xtend-multiple-dispatch/tree/master/src/main/java/edu/unq/obj3/typecheck), más conocido como `instanceof`
 - [**pattern matching**](https://github.com/uqbar-paco/obj3-xtend-multiple-dispatch/tree/master/src/main/java/edu/unq/obj3/patternmatching), implementado con el `switch` con vitaminas que trae Xtend
-- [**double dispatch**](https://github.com/uqbar-paco/obj3-xtend-multiple-dispatch/tree/master/src/main/java/edu/unq/obj3/doubledispatch), la opción más conservadora y OOP-purista-compliant
 - [**multimethods**](https://github.com/uqbar-paco/obj3-xtend-multiple-dispatch/tree/master/src/main/java/edu/unq/obj3/multimethods), o la evolución dinámica de la sobrecarga
 
 Dejamos al lector la tarea de analizar las ventajas y desventajas de cada una de estas opciones :smile:
