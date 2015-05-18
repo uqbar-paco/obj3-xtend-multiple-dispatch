@@ -10,6 +10,6 @@ Para esto, lo primero que necesitamos es la _carga neta_ de cada uno de ellos, q
 
 Una vez que tenemos eso, podemos calcular la carga compartida según las siguientes reglas:
 - Si se juntan una **Bici** con otra **Bici**, pueden llevar un cajón de 50 kilos sostenido entre las 2. Con cualquier otro vehículo la bici no lleva nada, por lo tanto queda la carga del otro.
-- Un **Camion** con otro **Camion** suman sus cargas y las multiplican por la cantidad de acoplados que sea menor (nosotros tampoco le vemos sentido a esto, pero el experto en logística nos dijo que ese era el cálculo).
+- Un **Camion** con otro **Camion** suman sus cargas y las multiplican por la cantidad de acoplados que sea mayor (nosotros tampoco le vemos sentido a esto, pero el experto en logística nos dijo que ese era el cálculo).
 - Un **Auto** y otro **Auto** pueden llevar un pequeño acoplado entre los dos, por lo que su carga se incrementa en 150 kilos.
 - En cualquier otro caso, el cálculo es simplemente la suma entre las 2 cargas netas.
