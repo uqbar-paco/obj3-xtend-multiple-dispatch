@@ -9,7 +9,7 @@ class BiciTest {
 		val biciDe55 = new Bici(20, #[Accesorio.parrilla])
 		val biciDe30 = new Bici(15, #[])
 		
-		135.assertEquals(biciDe55.cargaCombinadaCon(biciDe30))
+		135.assertEquals(biciDe55.cargaCompartidaCon(biciDe30))
 	}
 	
 	@Test 
@@ -17,6 +17,7 @@ class BiciTest {
 		val biciDe55 = new Bici(20, #[Accesorio.parrilla])
 		val autoDe80 = new Auto(80, false)
 		
-		80.assertEquals(biciDe55.cargaCombinadaCon(autoDe80))
+		80.assertEquals(biciDe55.cargaCompartidaCon(autoDe80))
+		80.assertEquals(autoDe80.cargaCompartidaCon(biciDe55))
 	}
 }

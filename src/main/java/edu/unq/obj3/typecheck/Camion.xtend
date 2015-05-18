@@ -5,7 +5,7 @@ import org.eclipse.xtend.lib.annotations.Data
 import static extension java.lang.Math.*
 
 @Data
-class Camion implements Vehiculo {
+class Camion extends Vehiculo {
 	int cantidadAcoplados
 	
 	static int CARGA_CABINA = 50
@@ -15,11 +15,13 @@ class Camion implements Vehiculo {
 		CARGA_CABINA + cantidadAcoplados * CARGA_ACOPLADO
 	}
 	
-	def cargaCombinadaCon(Vehiculo otro) {
+	override cargaCompartidaCon(Vehiculo otro) {
 		if (otro instanceof Camion) {
-			(this.cargaNeta + otro.cargaNeta) * this.cantidadAcoplados.max((otro as Camion).cantidadAcoplados)
+			(this.cargaNeta + otro.cargaNeta) * this.cantidadAcoplados.max(otro.cantidadAcoplados) 
+			//NOTA: Xtend me regala el casteo de *otro* a Camion, lo cual no quiere decir que no exista, 
+			//se puede ver el Java generado para comprobarlo.
 		} else {
-			this.cargaNeta + otro.cargaNeta
+			super.cargaCompartidaCon(otro)
 		}
 	}
 }

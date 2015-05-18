@@ -10,7 +10,7 @@ class CamionTest {
 		val camionDe5050 = new Camion(2)
 		
 		// 2550 + 5050 * 2
-		15200.assertEquals(camionDe2550.cargaCombinadaCon(camionDe5050))
+		15200.assertEquals(camionDe2550.cargaCompartidaCon(camionDe5050))
 	}
 	
 	@Test 
@@ -18,6 +18,6 @@ class CamionTest {
 		val camionDe2550 = new Camion(1)
 		val autoDe50 = new Auto(50, false)
 		
-		2600.assertEquals(camionDe2550.cargaCombinadaCon(autoDe50))
+		2600.assertEquals(camionDe2550.cargaCompartidaCon(autoDe50))
 	}
 }

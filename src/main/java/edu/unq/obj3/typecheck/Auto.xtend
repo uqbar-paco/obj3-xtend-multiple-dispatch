@@ -3,7 +3,7 @@ package edu.unq.obj3.typecheck
 import org.eclipse.xtend.lib.annotations.Data
 
 @Data
-class Auto implements Vehiculo {
+class Auto extends Vehiculo {
 	int cargaInicial
 	boolean tieneGNC
 	
@@ -13,11 +13,11 @@ class Auto implements Vehiculo {
 		cargaInicial * if (tieneGNC) 3 else 1
 	}
 	
-	def cargaCompartidaCon(Vehiculo otro) {
+	override cargaCompartidaCon(Vehiculo otro) {
 		if (otro instanceof Auto) {
 			this.cargaNeta + otro.cargaNeta + CARGA_ACOPLADO_COMPARTIDO
 		} else {
-			this.cargaNeta + otro.cargaNeta			
+			super.cargaCompartidaCon(otro)			
 		}
 	}
 }

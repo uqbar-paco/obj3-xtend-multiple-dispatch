@@ -15,7 +15,7 @@ class Accesorio {
 }
 
 @Data
-class Bici implements Vehiculo {
+class Bici extends Vehiculo {
 	int rodado
 	List<Accesorio> accesorios
 	
@@ -26,7 +26,7 @@ class Bici implements Vehiculo {
 		rodado * KILOS_POR_RODADO + accesorios.sum[cargaAdicional]
 	}
 	
-	def cargaCombinadaCon(Vehiculo otro) {
+	override cargaCompartidaCon(Vehiculo otro) {
 		if (otro instanceof Bici) {
 			this.cargaNeta + otro.cargaNeta + CARGA_CAJON_COMPARTIDO
 		} else {
